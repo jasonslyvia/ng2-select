@@ -132,7 +132,7 @@ var Select = (function () {
                 && e.target.className && e.target.className.indexOf('ui-select') >= 0) {
                 return;
             }
-            if (srcElement.contains(context.element.nativeElement) && e.srcElement && e.srcElement.className &&
+            if (e.srcElement.contains(context.element.nativeElement) && e.srcElement && e.srcElement.className &&
                 e.srcElement.className.indexOf('ui-select') >= 0) {
                 if (e.target.nodeName !== 'INPUT') {
                     context.matchClick(null);
