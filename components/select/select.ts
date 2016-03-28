@@ -169,7 +169,7 @@ export class Select implements OnChanges {
   }
 
   ngOnChanges(changes) {
-    if(changes.items && changes.item.previousValue) {
+    if(changes.items && changes.items.previousValue.length !== undefined) {
       const current = changes.items.currentValue;
       if(current && current.length) {
         this.open();
