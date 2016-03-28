@@ -410,6 +410,10 @@ export class Select implements OnChanges {
       return;
     }
 
+    if(value.id === -1) {
+      return;
+    }
+
     if (this.multiple === true) {
       this.active.push(value);
       this.data.next(this.active);
