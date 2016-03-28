@@ -55,6 +55,11 @@ var Select = (function () {
         enumerable: true,
         configurable: true
     });
+    Select.prototype.ngOnChanges = function (changes) {
+        if (changes.items) {
+            this.open();
+        }
+    };
     Select.prototype.focusToInput = function (value) {
         var _this = this;
         if (value === void 0) { value = ''; }

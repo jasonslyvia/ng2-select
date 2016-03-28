@@ -3,7 +3,8 @@ import {
   Input,
   Output,
   EventEmitter,
-  ElementRef
+  ElementRef,
+  OnChanges
 } from 'angular2/core';
 import {
   CORE_DIRECTIVES,
@@ -121,7 +122,7 @@ let optionsTemplate = `
   </div>
   `
 })
-export class Select {
+export class Select implements OnChanges {
   @Input()
   allowClear:boolean = false;
   @Input()
@@ -165,6 +166,12 @@ export class Select {
   private _disabled:boolean = false;
 
   constructor(public element:ElementRef) {
+  }
+
+  ngOnChanges(changes) {
+    if(changes.items) {
+      this.open();
+    }
   }
 
   private focusToInput(value:string = '') {
