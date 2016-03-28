@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "test": "gulp lint"
   },
-  "main": "ng2-select.js",
+  "main": "build/angular2-select.js",
   "typings": "ng2-select.d.ts",
   "keywords": [
     "angular2",
