@@ -5,13 +5,13 @@ import {
   EventEmitter,
   ElementRef,
   OnChanges
-} from 'angular2/core';
+} from '@angular2/core/index';
 import {
   CORE_DIRECTIVES,
   FORM_DIRECTIVES,
   NgClass,
   NgStyle
-} from 'angular2/common';
+} from '@angular2/common/index';
 import {SelectItem} from './select-item';
 import {HightlightPipe} from './select-pipes';
 import {IOptionsBehavior} from './select-interfaces';
